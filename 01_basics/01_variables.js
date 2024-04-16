@@ -19,7 +19,6 @@ accountCity = "Sikkim"
 // undefined variable
 let accountState;
 
-
 accountEmail = "singh@gmail.com"
 accountPassword = "654654654"
 accountCity = "Darjeeling"
