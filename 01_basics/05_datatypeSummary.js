@@ -51,6 +51,7 @@ const myFunction = function(){
  console.log(myName)
  console.log(mySecondName)
  
+ 
 
  let userOne = {
     email:"user@gmail.com",
