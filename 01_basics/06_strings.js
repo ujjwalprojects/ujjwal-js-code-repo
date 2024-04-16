@@ -10,7 +10,7 @@ console.log(name+repoCount); //not recommended to concat this way in modern day 
 console.log(`Hello ${name} and my repo count is ${repoCount}`);
 
 
-const gameName = new String('ujjwal-pc')
+const gameName = new String('ujjwal-pc') 
 console.log(typeof gameName); //object
 //accessing object property
 console.log(gameName.length);
