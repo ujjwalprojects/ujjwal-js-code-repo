@@ -39,6 +39,30 @@ const myFunction = function(){
 
 
 
+/**memory stack and heap */
+
+// primitive will be stored in stack and 
+// non primitive wil be stored in heap
+
+ let myName = "Ujjwal"
+ let mySecondName = myName;
+ mySecondName = "Singh"
+
+ console.log(myName)
+ console.log(mySecondName)
+ 
+
+ let userOne = {
+    email:"user@gmail.com",
+    isEmployeed:true
+ }
+
+ let userTwo = userOne
+
+ userTwo.email="user@yahoo.com";
+
+ console.log(userOne.email)
+ console.log(userTwo.email)
 
 
 
