@@ -22,7 +22,6 @@ let isLoggedIn = false
 // undefined := variable declared but not defined
 // symbol := usually required using react(unique)
 
-
 // object := 
 
 console.log(typeof "Mike") // string
