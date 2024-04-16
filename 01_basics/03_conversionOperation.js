@@ -77,7 +77,6 @@ console.log(2**3) //power
 console.log(2/3) //remainder
 console.log(2%3) //mod
 
-
 let str1 = "Hello"
 let str2 = " Ujjwal"
 
