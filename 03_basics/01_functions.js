@@ -30,6 +30,51 @@ function loginUserMsg(userName){
 }
 
 // console.log(loginUserMsg('ujjwal'));
-console.log(loginUserMsg(''));
+// console.log(loginUserMsg(''));
 
 
+function calculateCartPrice(num1){
+    return num1
+}
+
+// console.log(calculateCartPrice(200));
+
+// pass multiple params using rest operator (...)
+function calculateFoodPrice(...num1){
+    return num1
+}
+
+// console.log(calculateFoodPrice(200,201,202));
+// returns an array [ 200, 201, 202 ]
+
+
+function calculateItemsPrice(val1, val2,...val3){
+    return val3
+}
+// console.log(calculateItemsPrice(500,501,600,601))
+// [ 600, 601 ]
+
+
+const flipKart = {
+        itemname:'bag',
+        itemprice: 500
+}
+function handleObject(anyObject){
+    console.log(`Item Name is ${anyObject.itemname} and price is ${anyObject.itemprice}`)
+}
+// handleObject(flipKart);
+
+// pass object directly
+handleObject({
+    itemname:'toy',
+    itemprice:200
+})
+
+
+const newCartArray = [200,300,400,500]
+
+function returnSecondValue(getArr){
+    return getArr[1]
+}
+
+console.log(returnSecondValue(newCartArray));
