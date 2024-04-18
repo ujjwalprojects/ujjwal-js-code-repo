@@ -1,0 +1,14 @@
+DOM diagram
+
+Window -> Document -> HTML
+                        -> Head
+                            --> Title
+                                ---> Text node
+                            --> metatag
+                                ---> "attribute"
+                        -> Body
+                            --> div
+                                ---> "attribute"
+                                ---> h1
+                                    ----> "attribute"
+                                ---> p
