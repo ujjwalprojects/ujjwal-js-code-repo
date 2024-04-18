@@ -20,8 +20,8 @@ from polluting the global namespace and avoiding potential naming conflicts.
 console.log(typeof x); // Output: undefined
 
 /**so IFFE know that it is invoked but it dosen't know 
- * whre should it end the context therefore a semicolan ; is 
- * required to tne the iffe function
+ * where should it end the context therefore a semicolan ; is 
+ * required to end the iffe function
  */
 
 // arrow function way

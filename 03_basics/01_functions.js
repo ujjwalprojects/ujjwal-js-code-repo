@@ -11,6 +11,7 @@ function myCourse(){
 //     console.log(num1+num2);
 // }
 // addNumbers(2,7);
+
 function addNumbers(num1, num2){
     // let result = num1+num2;
     // return result;

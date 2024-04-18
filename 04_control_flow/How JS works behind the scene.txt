@@ -1,0 +1,84 @@
+Javascript Execution Context
+
+1. {jsCode} -> Global EC -> when a Global EC is created it is refered to
+a variable "this"
+
+2. JS is a single threaded 
+
+3. Functional Execution Context
+
+4. Eval Execution Context
+
+
+{jsCode} -> runs in two phases
+        1. Memory Creation phase -> in this phase the memory is created for the variables being declared
+        2. Execution phase 
+
+
+example:
+
+let val1 = 10
+let Val2 = 5
+function addNum(num1, num2){
+    let total = num1+num2
+    return total
+}
+
+let result1 = addNum(val1, val2)
+let result2 = addNum(99,66)
+
+
+**how the above code is executed
+
+
+1. Global Execution is allocated inside "this"
+2. Memory Phase : all the variables is colleced and stored in the memory
+        val1 <- undefined
+        val2 <- undefined
+        addNum <- defination
+        result1 <- undefined
+        result2 <- undefined
+3. Execution Phase 
+        val1 <- 10
+        val2 <- 5
+        addNum <- addNum make seperate Execution Context : 
+                        [new variable environment + Execution thread]
+                      1.  memory phase        
+                                    val1 <- undefined
+                                    val2 <- undefined
+                                    total <- undefined
+                                            +
+                      2.  execution thread    
+                                    num1 <- 10
+                                    num2 <- 5
+                                    total <- 15 -->> total will return to Global EC
+        result1 <- 15
+        addNum <- addNum make seperate Execution Context : 
+                        [new variable environment + Execution thread]
+                      1.  memory phase        
+                                    val1 <- undefined
+                                    val2 <- undefined
+                                    total <- undefined
+                                            +
+                      2.  execution thread    
+                                    num1 <- 99
+                                    num2 <- 66
+                                    total <- 165 -->> total will return to Global EC
+        result2 <- 165
+                                
+4. Call Stack
+
+                    
+
+            funthree() <--LIFO 
+            funtwo()
+            funone()
+        Global Execution
+
+
+
+
+
+
+
+
