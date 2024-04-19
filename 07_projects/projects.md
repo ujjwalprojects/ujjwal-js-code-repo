@@ -60,3 +60,17 @@ form.addEventListener('submit', (e)=>{
 })
 
 ```
+
+
+## project 3 digital clock
+
+```javascript
+const clock = document.getElementById('clock')
+
+// update time on certain interval
+setInterval(()=>{
+  let date = new Date()
+  // console.log(date.toLocaleTimeString())
+  clock.innerText = date.toLocaleTimeString()
+},1000)
+```
