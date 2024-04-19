@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manupulation</title>
+</head>
+<body  style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang){        
+        const li = document.createElement('li')
+        li.innerHTML = `${lang}`
+        const ul = document.querySelector('.language')
+        ul.appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('ruby')
+
+    // Optimized way
+
+    function addObtilang(lang){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addObtilang('golang')
+    addObtilang('c++')
+
+    // Edit with nth child
+    const secondlang = document.querySelector('li:nth-child(3)')
+    // secondlang.innerHTML = 'Mojo'
+    const newli = document.createElement('li')
+    newli.textContent='Mojo'
+    secondlang.replaceWith(newli)
+
+    // Edit with first child
+    const thirdlang = document.querySelector('li:first-child')
+    thirdlang.outerHTML = '<li>TypeScript</li>'
+
+    // remove with last child
+    const fouthlang = document.querySelector('li:last-child')
+    fouthlang.remove()
+
+</script>
+</html>
