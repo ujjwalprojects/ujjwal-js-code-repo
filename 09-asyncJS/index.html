@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>jS Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout is not a core js function it a browser function
+    // runs one time after time provided
+    // setInterval runs again and again after certain interval
+    
+    
+    const sayHello = function(){
+        console.log('Say Hello')
+    }
+    const changeH1 = function(){document.querySelector('h1').innerHTML = "JS tutorial"}
+    const changeMe = setTimeout(changeH1,2000)
+
+    // stop the setTimeout 
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log('STOPPED')
+    })
+</script>
+</html>

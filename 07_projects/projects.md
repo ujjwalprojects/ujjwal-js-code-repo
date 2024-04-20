@@ -173,3 +173,70 @@ function endGame(){
 }
 
 ```
+
+## project 5 unlimited color
+
+```javascript
+const body = document.querySelector('body')
+let colorchanges;
+
+
+function generateRandomColor() {
+  // Generate random values for red, green, and blue channels
+  var r = Math.floor(Math.random() * 256);
+  var g = Math.floor(Math.random() * 256);
+  var b = Math.floor(Math.random() * 256);
+
+  // Construct the color string in hexadecimal format
+  var color = "#" + r.toString(16) + g.toString(16) + b.toString(16);
+  body.style.backgroundColor = color
+  return color;
+}
+
+function startColorChanger(){
+  if(!colorchanges){
+    colorChanges = setInterval(function() {
+      generateRandomColor();
+    }, 1000);
+  }
+}
+function stopColorChanger() {
+  clearInterval(colorChanges);
+  colorchanges = null;
+}
+
+document.querySelector('#start').addEventListener('click', function(){
+  startColorChanger()
+})
+
+document.querySelector('#stop').addEventListener('click',function(){
+  stopColorChanger()
+})
+```
+
+
+## project 6 Keyboard Key check
+```javascript
+const insert = document.getElementById('insert')
+
+window.addEventListener('keydown',(e)=>{
+  insert.innerHTML=`
+  <div class='color'>
+    <table>
+      <tr>
+        <th>Key</th>
+        <th>KeyCode</th>
+        <th>Code</th>
+      </tr>
+      <tr>
+        <td>${e.key===' '?'space':e.key}</td>
+        <td>${e.keyCode}</td>
+        <td>${e.code}</td>
+      </tr>
+  </table>
+
+  </div>
+  `
+})
+```
+
